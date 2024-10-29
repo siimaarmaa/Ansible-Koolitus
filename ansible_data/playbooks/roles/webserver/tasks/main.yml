@@ -1,0 +1,29 @@
+---
+- name: Ensure apache is at the latest version YUM
+  ansible.builtin.yum:
+    name: httpd
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == 'OracleLinux'
+
+- name: Make sure a httpd service unit is running
+  ansible.builtin.systemd:
+    state: started
+    name: httpd
+    enabled: true
+  when: ansible_distribution == 'OracleLinux'
+
+- name: Ensure apache is at the latest version APT
+  ansible.builtin.apt:
+    name: apache2
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+
+- name: Make sure a apache2 service unit is running
+  ansible.builtin.systemd:
+    state: started
+    name: apache2
+    enabled: true
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+...
