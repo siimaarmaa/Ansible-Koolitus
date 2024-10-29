@@ -1,0 +1,13 @@
+---
+- name: Check that a page returns successfully
+  ansible.builtin.uri:
+    url: http://{{ ansible_host }}
+    follow_redirects: all
+    method: GET
+  register: _result
+#  failed_when: this is failed or "'PAGE' not in this.content"
+
+- name: Print var
+  ansible.builtin.debug:
+    var: _result.content
+...

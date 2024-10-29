@@ -1,0 +1,8 @@
+---
+- name: Http Check
+  hosts: all
+  become: true
+
+  roles:
+    - {role: http_check}
+...
