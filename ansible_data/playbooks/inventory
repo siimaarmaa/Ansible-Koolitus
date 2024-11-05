@@ -1,6 +1,4 @@
 [virtualmachines]
-ubuntu ansible_host="10.11.12.22" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant' 
-debian ansible_host="10.11.12.23" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
-oracle ansible_host="10.11.12.24" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
-[database]
-oracle ansible_host="10.11.12.24" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+ubuntu ansible_host="10.11.12.22" ansible_ssh_user='{{ vmuser }}' ansible_ssh_pass='{{ vmpass }}' ansible_become_pass='{{ vmpass }}' 
+debian ansible_host="10.11.12.23" ansible_ssh_user='{{ vmuser }}' ansible_ssh_pass='{{ vmpass }}' ansible_become_pass='{{ vmpass }}'
+oracle ansible_host="10.11.12.24" ansible_ssh_user='{{ vmuser }}' ansible_ssh_pass='{{ vmpass }}' ansible_become_pass='{{ vmpass }}'
