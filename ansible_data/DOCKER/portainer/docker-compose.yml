@@ -1,7 +1,6 @@
 services:
   portainer:
-    image: portainer/portainer-ce:2.23.0
-    command: -H unix:///var/run/docker.sock
+    image: portainer/portainer-ce:2.21.4
     restart: always
     ports:
       - 9443:9443

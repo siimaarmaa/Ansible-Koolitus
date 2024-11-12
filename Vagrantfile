@@ -7,8 +7,8 @@ config.vm.define "ansible" do |ansible|
   ansible.vm.hostname = "ansible"
   ansible.vm.synced_folder "./ansible_data", "/vagrant_data"
   ansible.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
-    vb.customize ["modifyvm", :id, "--cpus", "2"]
+    vb.customize ["modifyvm", :id, "--memory", "6144"]
+    vb.customize ["modifyvm", :id, "--cpus", "4"]
 	vb.name = "ANSIBLE"
     end
   ansible.vm.provision "shell", inline: <<-SHELL
