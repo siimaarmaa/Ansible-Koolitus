@@ -27,17 +27,17 @@ config.vm.define "ubuntu" do |ubuntu|
 	vb.name = "UBUNTU"
     end
   end
-config.vm.define "debian" do |debian|
-  debian.vm.box = "generic/debian11"
-  debian.vm.network "public_network"
-  debian.vm.network "private_network", ip: "10.11.12.23", virtualbox__intnet: "ansible_lab"
-  debian.vm.hostname = "debian"
-  debian.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
-    vb.customize ["modifyvm", :id, "--cpus", "2"]
-	vb.name = "DEBIAN"
-    end
-  end
+#config.vm.define "debian" do |debian|
+#  debian.vm.box = "generic/debian11"
+#  debian.vm.network "public_network"
+#  debian.vm.network "private_network", ip: "10.11.12.23", virtualbox__intnet: "ansible_lab"
+#  debian.vm.hostname = "debian"
+#  debian.vm.provider :virtualbox do |vb|
+#    vb.customize ["modifyvm", :id, "--memory", "2048"]
+#    vb.customize ["modifyvm", :id, "--cpus", "2"]
+#	vb.name = "DEBIAN"
+#    end
+#  end
 config.vm.define "oracle" do |oracle|
   oracle.vm.box = "generic/oracle9"
   oracle.vm.network "public_network"
