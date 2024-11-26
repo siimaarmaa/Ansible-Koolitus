@@ -1,0 +1,11 @@
+---
+- name: Write hostname
+  ansible.builtin.template:
+     src: test.j2
+     dest: /home/vagrant/hostname
+
+- name: Write file crypted
+  ansible.builtin.copy:
+     src: test.txt
+     dest: /home/vagrant/
+...

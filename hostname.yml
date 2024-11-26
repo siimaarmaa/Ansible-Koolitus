@@ -1,0 +1,8 @@
+---
+- name: Write hostname and OS info to server
+  hosts: all
+  become: true
+
+  roles:
+    - {role: hostname}
+...
