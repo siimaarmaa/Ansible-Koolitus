@@ -1,1 +1,4 @@
-
+---
+collections:
+- name: ansible.legacy.setup
+  source: 
